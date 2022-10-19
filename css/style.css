@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body {
+  font-family: "ヒラギノ角ゴシック" ;
+  font-size: 15px;
+}
+
+.brown {
+  background-color: #897a60;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  height: 100vh;
+}
+
+.gray {
+  background-color: #999595;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  width: 900px;
+  padding: 20px 0px 30px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.change {
+  width: 850px;
+  text-align: right;
+  margin: auto;
+  cursor: pointer;
+}
+
+#app ul{
+  padding: 0;
+  list-style: none;
+}
+
+#app li{
+}
+
+.command {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  color: #08c;
+  user-select: none;
+}
+
+.icon {
+  height: 20px;
+  width: 35px;
+}
+
+.user {
+  width: 522px;
+  margin: auto;
+  text-align: left;
+}
+
+.textarea-user {
+  text-align: center;
+  width: 300px;
+  height: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+.textarea-text {
+  text-align: center;
+  height: 50px;
+  width: 500px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+.postText {
+  line-height: 1.5;
+  width: 500px;
+  margin: 10px auto 30px;
+  padding: 20px 15px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+.like {
+  text-align: right;
+  font-family: 'Itim', cursive;
+}
+
+.submit {
+  margin: auto;
+  font-family: 'Itim', cursive;
+}
+
+#app form{
+  margin: 40px auto;
+}
+
+#app h1{
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
+}
+
+.titleCat {
+  height: 100px;
+  width: 70px;
+}

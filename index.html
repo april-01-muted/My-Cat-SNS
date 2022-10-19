@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Cat SNS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+  <div id="mask" :class="nowThema">
+  <div class="container">
+  <div v-if="nowThema === 'brown'">
+  <h1>
+    <img src="img/titelCat1.jpg" class="titleCat">
+    Cat SNS
+  </h1>
+  </div>
+  <div v-else>
+    <h1>
+      <img src="img/titelCat2.jpg" class="titleCat">
+      Cat SNS
+    </h1>
+  </div>
+  <form @submit.prevent="addPost">
+    <div class="user">
+      アイコン： <select name="icon" v-model="newUserIcon">
+        <option value="nomal">ノーマル</option>
+        <option value="buchi">ぶち模様</option>
+        <option value="shima">しま模様</option>
+        </select><br>
+    なまえ　： <input type="text" class="textarea-user" v-model="newUserNama">
+    </div>
+    <input type="text" class="textarea-text" placeholder="ねこについて投稿しよう！" v-model="newText"><br>
+    <input type="submit" class="submit" value="post">
+  </form>
+  <ul>
+  <li v-for="(post,index) in posts">
+    <div class="user">
+    <img src="img/nomal.jpg" v-if="img_src(index) == 'nomal'" class="icon">
+    <img src="img/buchi.jpg" v-if="img_src(index) == 'buchi'" class="icon">
+    <img src="img/shima.jpg" v-if="img_src(index) == 'shima'" class="icon">
+     <span>{{ post.user }}</span><br>
+    </div>
+    <div class="postText">
+    <span>{{ post.text }}</span><br>
+    <div class="like">{{ post.likes }} Na!
+    <img src="img/likeCat.jpg" @click="addLike(index)" class="command">
+    </div>
+    </div>
+  </li>
+  </ul>
+  <div @click="changeTheme()" class="change">テーマを変更</div>
+  </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
